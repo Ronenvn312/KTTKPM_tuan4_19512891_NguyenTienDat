@@ -1,0 +1,12 @@
+package com.example.se.jpamysqltuan4.service;
+
+import java.util.ArrayList;
+
+import com.example.se.jpamysqltuan4.entity.MayBay;
+
+public interface MayBayService {
+	public ArrayList<MayBay> findAll();
+	public MayBay findById(int theId);
+	public void save(MayBay mayBay);
+	public void deleteById(String maMB);
+}

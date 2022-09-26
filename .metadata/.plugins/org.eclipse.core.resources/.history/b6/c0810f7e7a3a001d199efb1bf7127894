@@ -1,0 +1,13 @@
+package com.example.se.jpamysqltuan4;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class JpaMysqlTuan4Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JpaMysqlTuan4Application.class, args);
+	}
+
+}

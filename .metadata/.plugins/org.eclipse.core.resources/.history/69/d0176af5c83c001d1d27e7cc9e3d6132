@@ -1,0 +1,49 @@
+package com.example.se.jpamysqltuan4.entity;
+	
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+//@NoArgsConstructor
+@Entity
+@Table(name = "chuyenbay")
+public class ChuyenBay {
+	@Id
+	@Column(name = "MaCB")
+	@Basic
+	private String maCB;
+	
+	@Column(name = "GaDi")
+	@Basic
+	private String gaDi;
+	
+	@Column(name = "GaDen")
+	@Basic
+	private String gaDen;
+	
+	@Column(name = "DoDai")
+	@Basic
+	private int doDai;
+	
+	@Column(name = "GioDi")
+	@Basic
+	private String gioDi;
+	
+	@Column(name = "GioDen")
+	@Basic
+	private String gioDen;
+	
+	@Column(name = "ChiPhi")
+	@Basic
+	private int chiPhi;
+}

@@ -1,0 +1,96 @@
+package com.example.se.jpamysqltuan4.entity;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+@Entity
+@Table(name = "maybay")
+@Data
+public class MayBay implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8979644254804806494L;
+	@Id
+	@Column(name = "MaMB")
+	private int maMB;
+	@Column(name = "Loai")
+	private String loai;
+	@Column(name = "TamBay")
+	private int tamBay;
+
+	@OneToMany(mappedBy = "maybay", cascade = CascadeType.ALL) // Quan hệ 1-n với đối tượng ở dưới (Person) (1 địa điểm
+																// có nhiều người ở)
+	// MapopedBy trỏ tới tên biến Address ở trong Person.
+	@EqualsAndHashCode.Exclude // không sử dụng trường này trong equals và hashcode
+	@ToString.Exclude // Khoonhg sử dụng trong toString()
+	private ArrayList<ChungNhan> chungNhans;
+
+	public ArrayList<ChungNhan> getChungNhan() {
+		return chungNhans;
+	}
+
+	public void setChungNhan(ArrayList<ChungNhan> chungNhans) {
+		this.chungNhans = chungNhans;
+	}
+
+	public int getMaMB() {
+		return maMB;
+	}
+
+	public void setMaMB(int maMB) {
+		this.maMB = maMB;
+	}
+
+	public String getLoai() {
+		return loai;
+	}
+
+	public void setLoai(String loai) {
+		this.loai = loai;
+	}
+
+	public int getTamBay() {
+		return tamBay;
+	}
+
+	public void setTamBay(int tamBay) {
+		this.tamBay = tamBay;
+	}
+
+	public MayBay(int maMB, String loai, int tamBay) {
+		super();
+		this.maMB = maMB;
+		this.loai = loai;
+		this.tamBay = tamBay;
+	}
+
+	public MayBay() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "MayBay [maMB=" + maMB + ", loai=" + loai + ", tamBay=" + tamBay + "]";
+	}
+
+	public MayBay(int maMB) {
+		super();
+		this.maMB = maMB;
+	}
+
+}

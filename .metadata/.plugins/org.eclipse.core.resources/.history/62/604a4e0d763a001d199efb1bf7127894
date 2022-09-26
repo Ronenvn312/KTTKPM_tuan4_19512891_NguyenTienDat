@@ -1,0 +1,10 @@
+package com.example.se.jpamysqltuan4.service;
+import java.util.List;
+
+
+public interface ChuyenBayService {
+	public List<ChuyenBay> findAll();
+	public ChuyenBay findById(int theId);
+	public void save(ChuyenBay chuyenBay);
+	public void deleteById(String maCB);
+}

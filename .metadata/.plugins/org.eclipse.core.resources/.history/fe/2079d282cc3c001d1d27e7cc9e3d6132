@@ -1,0 +1,5 @@
+package com.example.se.jpamysqltuan4.dao;
+
+public interface MayBayRepository {
+
+}

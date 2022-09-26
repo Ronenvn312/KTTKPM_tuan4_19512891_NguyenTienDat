@@ -1,0 +1,28 @@
+package com.example.se.jpamysqltuan4.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "chungnhan")
+@Data
+@IdClass(ChungNhanPK.class)
+public class ChungNhan {
+
+	@Id
+	@ManyToOne
+	@JoinColumn(name = "MaMB")
+	private MayBay maMB;
+
+	@Id
+	@ManyToOne
+	@JoinColumn(name = "MaMB")
+	private NhanVien maNV;
+
+}

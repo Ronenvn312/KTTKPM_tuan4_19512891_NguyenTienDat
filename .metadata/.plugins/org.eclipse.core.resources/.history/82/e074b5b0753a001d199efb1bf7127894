@@ -1,0 +1,9 @@
+package com.se.kttkpm.thuchanhtuan4.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.se.kttkpm.thuchanhtuan4.entity.ChuyenBay;
+
+public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String>{
+
+}

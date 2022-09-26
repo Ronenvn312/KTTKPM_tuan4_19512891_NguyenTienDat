@@ -1,0 +1,50 @@
+package com.example.se.jpamysqltuan4.entity;
+
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "chungnhan")
+public class ChungNhan implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private NhanVien nhanVien;
+	private MayBay mayBay;
+	
+
+	@Id
+	@ManyToOne
+	@JoinColumn(name = "maNV")
+	public NhanVien getNhanVien() {
+		return nhanVien;
+	}
+
+	public void setNhanVien(NhanVien nhanVien) {
+		this.nhanVien = nhanVien;
+	}
+	@Id
+	@ManyToOne
+	@JoinColumn(name = "maMB")
+	public MayBay getMayBay() {
+		return mayBay;
+	}
+
+	public void setMayBay(MayBay mayBay) {
+		this.mayBay = mayBay;
+	}
+	
+	
+	
+}

@@ -1,0 +1,69 @@
+package com.example.se.jpamysqltuan4.entity;
+	
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+@Entity
+@Table(name = "chuyenbay")
+public class ChuyenBay {
+	@Id
+	@Column(name = "MaCB")
+	private String maCB;
+	
+	@Column(name = "GaDi")
+	private String gaDi;
+	
+	@Column(name = "GaDen")
+	private String gaDen;
+	
+	@Column(name = "DoDai")
+	private Integer doDai;
+	
+	@Column(name = "GioDi")
+	private String gioDi;
+	
+	@Column(name = "GioDen")
+	private String gioDen;
+	
+	@Column(name = "ChiPhi")
+	private Integer chiPhi;
+
+	
+	public ChuyenBay() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public ChuyenBay(String maCB, String gaDi, String gaDen, Integer doDai, String gioDi, String gioDen,
+			Integer chiPhi) {
+		super();
+		this.maCB = maCB;
+		this.gaDi = gaDi;
+		this.gaDen = gaDen;
+		this.doDai = doDai;
+		this.gioDi = gioDi;
+		this.gioDen = gioDen;
+		this.chiPhi = chiPhi;
+	}
+
+
+	@Override
+	public String toString() {
+		return "ChuyenBay [maCB=" + maCB + ", gaDi=" + gaDi + ", gaDen=" + gaDen + ", doDai=" + doDai + ", gioDi="
+				+ gioDi + ", gioDen=" + gioDen + ", chiPhi=" + chiPhi + "]";
+	}
+
+	
+}
