@@ -1,0 +1,22 @@
+-----------------------------------------------build container mysql
+docker pull mysql
+docker run --name mysql -p 3366:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+docker ps -a // kiem tra container runed
+--run docker trong docker hub --> inside command line run line :
+	mysql -u root -p
+	password: 123456
+	--> mysql is  running 
+	create database --> Ctrl+ shift + V
+-- docker images: test images created 
+-- docker 
+	docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' myNameMySQLContainer
+-- docker rm 1297726e9420 --> detete container if you want delete it
+-- docker rmi 1297726e9420 --> detete images if you want delete it
+-- docker inspect : ket noi toi net word qua ipaddress inside console
+	$ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-mysql
+-------------------------------------------- build container java spring boot project
+-- inside git bash in VSCode :  cd to root your project: 
+	EX: cd D:\HK1_2022-2023\KTTKPM\baitapthuchanh\tuan4\jpa-mysql-tuan4
+	Then: export your project inside forder target ( .jar runable) 
+	Inside git bash: $ ./mvnw package && java -jar target/NameProjectExport-SNAPSHOT.jar
+	Next: open Google Crom and localhost:8090

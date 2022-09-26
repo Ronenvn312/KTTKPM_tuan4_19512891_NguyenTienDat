@@ -1,0 +1,3 @@
+git remote add origin https://github.com/Ronenvn312/KTTKPM_tuan4_19512891_NguyenTienDat.git
+git branch -M main
+git push -u origin main
